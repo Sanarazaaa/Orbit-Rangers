@@ -27,18 +27,14 @@
       position: absolute;
       right: 120px; /* Keep astronaut a bit to the left */
       top: 30%; /* Move astronaut higher */
-      transform: translateY(-50%) rotateY(0deg) rotateX(0deg); /* Apply 3D rotation */
+      transform: translateY(-50%); /* Remove rotation */
       width: 300px; /* Increased size */
       height: 300px; /* Increased size */
       background-image: url('character.png'); /* Relative path to your astronaut image */
       background-size: cover;
       background-position: center; /* Center the image */
       z-index: 1;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a soft shadow for a 3D effect */
-      transition: transform 0.3s ease; /* Smooth transition for rotation */
-    }
-    .astronaut:hover {
-      transform: translateY(-50%) rotateY(15deg) rotateX(15deg); /* Rotate astronaut on hover for 3D effect */
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
     }
     /* Sparkling Stars */
     .star {
@@ -100,7 +96,7 @@
         this.sun = new CelestialBody('Sun', 350, 0, 'estrela_sun.gif');
         this.planets.push(new CelestialBody('Mercury', 25, 150, 'mercurio.gif'));
         this.planets.push(new CelestialBody('Venus', 45, 250, 'venus.gif'));
-        this.planets.push(new CelestialBody('Earth', 55, 350, 'earth.gif'));
+        this.planets.push(new CelestialBody('Earth', 55, 350, 'slow-earth.gif'));
         this.planets.push(new CelestialBody('Mars', 40, 450, 'marte.gif'));
         this.planets.push(new CelestialBody('Jupiter', 100, 550, 'jupiter.gif'));
         this.planets.push(new CelestialBody('Saturn', 220, 700, 'saturno.gif'));
